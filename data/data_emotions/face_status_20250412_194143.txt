@@ -1,0 +1,66 @@
+2025-04-12 19:41:53.723 - ID: 0 | Name: 问思祺 | Status: Focused
+2025-04-12 19:41:54.773 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:01.152 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:02.190 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:03.298 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:04.407 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:05.477 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:07.236 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:10.344 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:21.661 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:27.241 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:33.498 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:38.403 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:42.242 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:44.526 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:20:45.593 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:00.465 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:03.139 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:03.608 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:04.795 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:06.931 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:21:07.998 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:21:09.090 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:21:10.265 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:21:11.723 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:21:12.727 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:12.802 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:13.848 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:15.248 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:16.284 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:17.298 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:18.361 - ID: 0 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:21:19.460 - ID: 0 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:21:20.515 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:21:21.531 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:37:01.931 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:37:02.674 - ID: 0 | Name: 杨依林 | Status: Turning LEFT
+2025-04-12 20:37:02.942 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:37:03.776 - ID: 0 | Name: 杨依林 | Status: Turning LEFT
+2025-04-12 20:37:03.950 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:37:04.806 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:37:04.955 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:37:05.821 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:37:06.009 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:37:07.048 - ID: 0 | Name: 杨依林 | Status: Turning LEFT
+2025-04-12 20:37:16.538 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:37:17.222 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:37:17.639 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:37:18.735 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:38:50.749 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:38:51.776 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:38:54.674 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:38:55.725 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:41:25.771 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:41:26.825 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:41:44.895 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:42:17.088 - ID: 0 | Name: 杨依林 | Status: Distracted
+2025-04-12 20:42:18.137 - ID: 0 | Name: 杨依林 | Status: Distracted
+2025-04-12 20:42:18.170 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:42:19.191 - ID: 0 | Name: 杨依林 | Status: Distracted
+2025-04-12 20:42:19.225 - ID: 1 | Name: 问思祺 | Status: No Face Detected
+2025-04-12 20:42:20.237 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:42:20.850 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:42:22.344 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:42:22.845 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-12 20:42:23.876 - ID: 0 | Name: 问思祺 | Status: Distracted

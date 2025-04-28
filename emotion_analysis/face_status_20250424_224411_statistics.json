@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "问思祺": {
+      "total_records": 51,
+      "status_counts": {
+        "Distracted": 50,
+        "Focused": 1
+      },
+      "status_percentages": {
+        "Distracted": 98.04,
+        "Focused": 1.96
+      }
+    },
+    "未知人脸": {
+      "total_records": 5,
+      "status_counts": {
+        "Distracted": 2,
+        "Focused": 1,
+        "Turning RIGHT": 1,
+        "No Face Detected": 1
+      },
+      "status_percentages": {
+        "Distracted": 40.0,
+        "Focused": 20.0,
+        "Turning RIGHT": 20.0,
+        "No Face Detected": 20.0
+      }
+    },
+    "宋嘉怡": {
+      "total_records": 44,
+      "status_counts": {
+        "Distracted": 16,
+        "Head Down": 27,
+        "Turning RIGHT": 1
+      },
+      "status_percentages": {
+        "Distracted": 36.36,
+        "Head Down": 61.36,
+        "Turning RIGHT": 2.27
+      }
+    }
+  }
+}

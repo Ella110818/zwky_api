@@ -1,0 +1,100 @@
+2025-04-24 22:44:12.014 - ID: 0 | Name: 问思祺 | Status: Focused
+2025-04-24 22:44:12.982 - ID: 1 | Name: 未知人脸 | Status: Focused
+2025-04-24 22:44:13.506 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:14.227 - ID: 1 | Name: 未知人脸 | Status: No Face Detected
+2025-04-24 22:44:14.599 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:16.150 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:17.352 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:18.038 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:44:18.948 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:19.594 - ID: 1 | Name: 宋嘉怡 | Status: Turning RIGHT
+2025-04-24 22:44:20.921 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:20.936 - ID: 1 | Name: 未知人脸 | Status: Turning RIGHT
+2025-04-24 22:44:22.261 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:22.278 - ID: 1 | Name: 未知人脸 | Status: Distracted
+2025-04-24 22:44:23.571 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:23.584 - ID: 1 | Name: 未知人脸 | Status: Distracted
+2025-04-24 22:44:24.857 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:24.872 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:26.090 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:26.106 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:44:27.179 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:27.194 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:44:28.508 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:28.522 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:29.752 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:29.766 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:44:30.830 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:30.844 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:44:32.213 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:32.227 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:33.357 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:33.370 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:34.504 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:34.518 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:35.956 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:35.969 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:37.053 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:37.069 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:38.373 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:38.388 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:39.578 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:39.594 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:40.729 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:40.743 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:41.892 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:41.906 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:43.126 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:43.138 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:44.644 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:44.659 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:45.692 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:45.706 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:46.927 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:46.941 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:48.160 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:48.174 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:49.239 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:49.255 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:50.572 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:50.587 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:51.888 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:51.902 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:53.020 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:53.034 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:54.529 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:54.544 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:55.648 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:55.662 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:56.976 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:56.991 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:58.179 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:58.194 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:44:59.279 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:44:59.293 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:45:00.541 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:00.555 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:45:01.829 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:01.845 - ID: 1 | Name: 宋嘉怡 | Status: Head Down
+2025-04-24 22:45:03.075 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:03.092 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:04.631 - ID: 0 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:04.644 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:06.076 - ID: 0 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:06.089 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:07.131 - ID: 0 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:07.145 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:08.241 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:08.255 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:09.673 - ID: 0 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:09.687 - ID: 1 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:10.865 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:10.881 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:12.154 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:12.170 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:13.366 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:13.380 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:14.528 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:14.542 - ID: 1 | Name: 宋嘉怡 | Status: Distracted
+2025-04-24 22:45:15.989 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 22:45:16.005 - ID: 1 | Name: 宋嘉怡 | Status: Distracted

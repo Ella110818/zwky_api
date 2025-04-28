@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "杨依林": {
+      "total_records": 295,
+      "status_counts": {
+        "Distracted": 4,
+        "Focused": 1,
+        "Head Down": 91,
+        "Turning RIGHT": 40,
+        "No Face Detected": 159
+      },
+      "status_percentages": {
+        "Distracted": 1.36,
+        "Focused": 0.34,
+        "Head Down": 30.85,
+        "Turning RIGHT": 13.56,
+        "No Face Detected": 53.9
+      }
+    },
+    "谢宛桐": {
+      "total_records": 265,
+      "status_counts": {
+        "No Face Detected": 265
+      },
+      "status_percentages": {
+        "No Face Detected": 100.0
+      }
+    },
+    "李乐": {
+      "total_records": 295,
+      "status_counts": {
+        "Distracted": 1,
+        "Focused": 1,
+        "Head Down": 3,
+        "Turning RIGHT": 223,
+        "No Face Detected": 67
+      },
+      "status_percentages": {
+        "Distracted": 0.34,
+        "Focused": 0.34,
+        "Head Down": 1.02,
+        "Turning RIGHT": 75.59,
+        "No Face Detected": 22.71
+      }
+    },
+    "宋嘉怡": {
+      "total_records": 295,
+      "status_counts": {
+        "Head Down": 2,
+        "No Face Detected": 293
+      },
+      "status_percentages": {
+        "Head Down": 0.68,
+        "No Face Detected": 99.32
+      }
+    },
+    "马莉岚": {
+      "total_records": 330,
+      "status_counts": {
+        "No Face Detected": 330
+      },
+      "status_percentages": {
+        "No Face Detected": 100.0
+      }
+    },
+    "未知人脸": {
+      "total_records": 125,
+      "status_counts": {
+        "No Face Detected": 125
+      },
+      "status_percentages": {
+        "No Face Detected": 100.0
+      }
+    },
+    "陈文伟": {
+      "total_records": 272,
+      "status_counts": {
+        "Distracted": 1,
+        "Head Down": 8,
+        "Turning RIGHT": 46,
+        "No Face Detected": 217
+      },
+      "status_percentages": {
+        "Distracted": 0.37,
+        "Head Down": 2.94,
+        "Turning RIGHT": 16.91,
+        "No Face Detected": 79.78
+      }
+    },
+    "汤燕": {
+      "total_records": 188,
+      "status_counts": {
+        "No Face Detected": 188
+      },
+      "status_percentages": {
+        "No Face Detected": 100.0
+      }
+    }
+  }
+}

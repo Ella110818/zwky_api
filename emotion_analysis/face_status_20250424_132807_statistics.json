@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "问思祺": {
+      "total_records": 90,
+      "status_counts": {
+        "Distracted": 84,
+        "Turning LEFT": 2,
+        "Turning RIGHT": 4
+      },
+      "status_percentages": {
+        "Distracted": 93.33,
+        "Turning LEFT": 2.22,
+        "Turning RIGHT": 4.44
+      }
+    }
+  }
+}

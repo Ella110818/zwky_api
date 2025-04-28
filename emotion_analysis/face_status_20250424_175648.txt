@@ -1,0 +1,95 @@
+2025-04-24 17:56:48.378 - ID: 0 | Name: 问思祺 | Status: Focused
+2025-04-24 17:56:49.730 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:56:50.858 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:56:52.056 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:56:53.233 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:56:54.858 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:56:56.316 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:56:57.880 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:56:59.321 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:00.864 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:02.457 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:03.989 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:05.674 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:07.219 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:08.853 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:10.371 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:11.919 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:13.546 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:15.078 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:16.584 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:18.133 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:57:19.795 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:21.424 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:23.127 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:24.853 - ID: 0 | Name: 问思祺 | Status: Turning LEFT
+2025-04-24 17:57:26.397 - ID: 0 | Name: 问思祺 | Status: Turning LEFT
+2025-04-24 17:57:27.613 - ID: 0 | Name: 问思祺 | Status: Turning LEFT
+2025-04-24 17:57:29.097 - ID: 0 | Name: 问思祺 | Status: Turning LEFT
+2025-04-24 17:57:30.753 - ID: 0 | Name: 问思祺 | Status: Turning LEFT
+2025-04-24 17:57:32.094 - ID: 0 | Name: 问思祺 | Status: Turning LEFT
+2025-04-24 17:57:33.583 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:35.037 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:36.608 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:38.107 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:39.691 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:41.462 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:42.999 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:44.777 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:46.304 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:47.792 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:49.467 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:50.954 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:52.504 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:54.160 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:55.731 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:57.305 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:57:58.978 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:00.790 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:02.394 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:03.927 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:58:05.509 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:58:06.793 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:58:08.127 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:58:09.625 - ID: 0 | Name: 问思祺 | Status: Turning RIGHT
+2025-04-24 17:58:11.020 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:12.652 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:14.145 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:15.611 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:17.142 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:18.629 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:20.095 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:21.588 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:23.137 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:24.670 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:26.054 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:27.628 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:29.153 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:30.533 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:32.094 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:33.591 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:35.116 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:36.658 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:38.247 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:39.864 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:41.412 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:42.950 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:44.299 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:45.794 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:47.174 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:48.698 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:50.288 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:51.750 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:53.302 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:54.680 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:56.170 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:57.686 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:58:59.021 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:00.421 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:01.784 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:03.231 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:04.645 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:06.049 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:07.535 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:08.868 - ID: 0 | Name: 问思祺 | Status: Distracted
+2025-04-24 17:59:10.178 - ID: 0 | Name: 问思祺 | Status: Distracted

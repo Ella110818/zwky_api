@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "问思祺": {
+      "total_records": 127,
+      "status_counts": {
+        "Distracted": 126,
+        "Focused": 1
+      },
+      "status_percentages": {
+        "Distracted": 99.21,
+        "Focused": 0.79
+      }
+    }
+  }
+}
