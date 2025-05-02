@@ -9,8 +9,10 @@ logger = logging.getLogger('zwky_api')
 
 class CSRFExemptMiddleware(CsrfViewMiddleware):
     def process_view(self, request, callback, callback_args, callback_kwargs):
-        # AI助手路径直接豁免CSRF
-        if request.path.startswith('/api/ai/'):
+        # 豁免所有API路径的CSRF验证
+        if (request.path.startswith('/api/') or 
+            request.path.startswith('/face_recognition/')):
+            logger.debug(f"CSRF豁免路径: {request.path}")
             return None
         return super().process_view(request, callback, callback_args, callback_kwargs)
 

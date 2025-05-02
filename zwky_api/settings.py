@@ -153,6 +153,8 @@ AUTH_USER_MODEL = 'user_management.User'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',  # 启用JWT认证
+        # 使用自定义的SessionAuthentication
+        'zwky_api.authentication.CsrfExemptSessionAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',  # 启用权限要求
@@ -218,8 +220,12 @@ CORS_ALLOW_HEADERS = [
 # CSRF设置
 CSRF_COOKIE_HTTPONLY = False  # 允许JavaScript访问CSRF令牌
 CSRF_USE_SESSIONS = False
-CSRF_COOKIE_SAMESITE = 'Lax'  # 或者使用'None'，但需要HTTPS
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8080', 'http://127.0.0.1:8080']
+CSRF_COOKIE_SAMESITE = 'None'  # 修改为'None'以允许跨站请求
+CSRF_COOKIE_SECURE = DEBUG is False  # 在生产环境中使用安全cookie
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8080', 'http://127.0.0.1:8080', 'http://localhost:3000', 'http://127.0.0.1:3000']
+# 添加用于API的特定设置
+CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
+CSRF_COOKIE_NAME = 'csrftoken'
 
 # 日志配置
 LOGS_DIR = os.path.join(BASE_DIR, 'logs')
