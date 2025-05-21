@@ -51,8 +51,8 @@ INSTALLED_APPS = [
     'class_management',
     'status_management',
     'face_recognition',
-    'advanced_features',  # 添加高级功能应用
-    'ai_assistant',
+    'advanced_features.apps.AdvancedFeaturesConfig',  # 添加高级功能应用
+    'ai_assistant.apps.AiAssistantConfig',
 ]
 
 # 上传文件大小限制设置
@@ -220,7 +220,8 @@ CORS_ALLOW_HEADERS = [
 # CSRF设置
 CSRF_COOKIE_HTTPONLY = False  # 允许JavaScript访问CSRF令牌
 CSRF_USE_SESSIONS = False
-CSRF_COOKIE_SAMESITE = 'None'  # 修改为'None'以允许跨站请求
+# CSRF_COOKIE_SAMESITE = 'None'  # 修改为'None'以允许跨站请求
+CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SECURE = DEBUG is False  # 在生产环境中使用安全cookie
 CSRF_TRUSTED_ORIGINS = ['http://localhost:8080', 'http://127.0.0.1:8080', 'http://localhost:3000', 'http://127.0.0.1:3000']
 # 添加用于API的特定设置

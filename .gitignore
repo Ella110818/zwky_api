@@ -1,0 +1,9 @@
+*.log
+*.cache
+*.pid
+*.sock
+*.lock
+*.tmp
+*.swp
+*.tmp
+*.tmp
