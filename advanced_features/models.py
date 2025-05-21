@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from course_management.models import Course
 from user_management.models import User, Student
+from decimal import Decimal
 
 class CourseAnnouncement(models.Model):
     """课程公告模型"""
@@ -95,3 +96,88 @@ class CourseGroup(models.Model):
     
     def __str__(self):
         return f"{self.course.title} - {self.name}" 
+
+class GradeRecord(models.Model):
+    """成绩记录模型"""
+    student = models.ForeignKey(
+        Student, 
+        on_delete=models.CASCADE,
+        related_name='grade_records',
+        verbose_name='学生'
+    )
+    course = models.ForeignKey(
+        Course, 
+        on_delete=models.CASCADE,
+        related_name='grade_records',
+        verbose_name='课程'
+    )
+    
+    # 各类成绩
+    class_score = models.DecimalField(
+        max_digits=5, 
+        decimal_places=2, 
+        null=True, 
+        blank=True, 
+        verbose_name='课堂成绩'
+    )
+    homework_score = models.DecimalField(
+        max_digits=5, 
+        decimal_places=2, 
+        null=True, 
+        blank=True, 
+        verbose_name='作业成绩'
+    )
+    exam_score = models.DecimalField(
+        max_digits=5, 
+        decimal_places=2, 
+        null=True, 
+        blank=True, 
+        verbose_name='考试成绩'
+    )
+    
+    # 添加学期字段以区分不同学期的成绩
+    SEMESTER_CHOICES = [
+        ('2023-2024-1', '2023-2024学年第一学期'),
+        ('2023-2024-2', '2023-2024学年第二学期'),
+        ('2024-2025-1', '2024-2025学年第一学期'),
+        ('2024-2025-2', '2024-2025学年第二学期'),
+    ]
+    
+    semester = models.CharField(
+        max_length=50,
+        choices=SEMESTER_CHOICES,
+        verbose_name='学期',
+        help_text='选择学期'
+    )
+    
+    created_at = models.DateTimeField(
+        default=timezone.now, 
+        verbose_name='创建时间'
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True, 
+        verbose_name='更新时间'
+    )
+    
+    class Meta:
+        verbose_name = '成绩记录'
+        verbose_name_plural = '成绩记录'
+        ordering = ['student', 'course']
+        # 添加学期到唯一约束，允许同一学生在同一课程不同学期有记录
+        unique_together = ('student', 'course', 'semester')
+    
+    def __str__(self):
+        return f"{self.student.user.username} - {self.course.title} - {self.semester}"
+    
+    @property
+    def total_score(self):
+        """
+        计算总成绩：课堂成绩30%，作业成绩20%，考试成绩50%
+        如果某项成绩未录入，则按0分计算
+        """
+        class_score = self.class_score or Decimal('0')
+        homework_score = self.homework_score or Decimal('0')
+        exam_score = self.exam_score or Decimal('0')
+        
+        total = class_score * Decimal('0.3') + homework_score * Decimal('0.2') + exam_score * Decimal('0.5')
+        return round(total, 2)   

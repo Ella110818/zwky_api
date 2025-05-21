@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.db import transaction
-from django.db.models import Q
+from django.db.models import Q, Avg, Min, Max, Count
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.pagination import PageNumberPagination
@@ -10,13 +10,14 @@ import random
 from course_management.models import Course, StudentCourse
 from user_management.models import Student
 from user_management.utils import api_response
-from .models import CourseAnnouncement, Assignment, AssignmentSubmission, CourseGroup
+from .models import CourseAnnouncement, Assignment, AssignmentSubmission, CourseGroup, GradeRecord
 from .serializers import (
     CourseAnnouncementSerializer, 
     AssignmentSerializer, 
     AssignmentSubmissionSerializer,
     StudentInfoSerializer,
-    CourseGroupSerializer
+    CourseGroupSerializer,
+    GradeRecordSerializer
 )
 
 class StandardResultsSetPagination(PageNumberPagination):
@@ -493,4 +494,274 @@ class AutoGroupView(APIView):
             data={
                 "groups": serializer.data
             }
+        )
+
+
+class StudentGradeView(APIView):
+    """学生成绩视图"""
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request):
+        """获取当前学生的所有成绩记录，按成绩类型分组汇总"""
+        user = request.user
+        
+        # 验证是否为学生
+        if user.role != 'student':
+            return api_response(
+                code=403,
+                message="只有学生可以查看自己的成绩",
+                data=None
+            )
+        
+        try:
+            student = user.student_profile
+        except:
+            return api_response(
+                code=404,
+                message="学生信息不存在",
+                data=None
+            )
+        
+        # 获取查询参数
+        semester = request.query_params.get('semester')
+        course_id = request.query_params.get('course_id')
+        
+        # 查询成绩记录
+        records = GradeRecord.objects.filter(student=student)
+        
+        # 应用过滤条件
+        if semester:
+            records = records.filter(semester=semester)
+        
+        if course_id:
+            records = records.filter(course__course_id=course_id)
+        
+        # 按学期和课程分组整理数据
+        result = {}
+        
+        # 分学期
+        semesters = {}
+        for record in records:
+            sem = record.get_semester_display()
+            if sem not in semesters:
+                semesters[sem] = []
+            semesters[sem].append(record)
+        
+        # 每个学期下按课程分组
+        for sem, sem_records in semesters.items():
+            courses = {}
+            for record in sem_records:
+                course_title = f"{record.course.course_id} {record.course.title}"
+                if course_title not in courses:
+                    courses[course_title] = {
+                        "class_score": record.class_score,
+                        "homework_score": record.homework_score,
+                        "exam_score": record.exam_score,
+                        "total_score": record.total_score,
+                        "record_id": record.id
+                    }
+            
+            result[sem] = {
+                "courses": courses,
+                "avg_score": sum(record.total_score for record in sem_records) / len(sem_records) if sem_records else 0
+            }
+        
+        return api_response(
+            code=200,
+            message="获取成功",
+            data=result
+        )
+
+
+class CourseGradeView(APIView):
+    """课程成绩视图"""
+    permission_classes = [IsAuthenticated]
+    pagination_class = StandardResultsSetPagination
+    
+    def get(self, request, course_id):
+        """获取课程的所有学生成绩记录"""
+        # 检查课程是否存在
+        course = get_object_or_404(Course, course_id=course_id)
+        
+        # 检查是否为教师
+        user = request.user
+        if user.role != 'teacher':
+            return api_response(
+                code=403,
+                message="只有教师可以查看课程成绩",
+                data=None
+            )
+        
+        # 检查教师是否是该课程的教师
+        try:
+            teacher = user.teacher_profile
+            if course.teacher != teacher:
+                return api_response(
+                    code=403,
+                    message="您不是此课程的教师",
+                    data=None
+                )
+        except:
+            return api_response(
+                code=403,
+                message="教师信息不存在",
+                data=None
+            )
+        
+        # 获取查询参数
+        semester = request.query_params.get('semester')
+        sort_by = request.query_params.get('sort_by', 'total_score')  # 默认按总分排序
+        sort_order = request.query_params.get('sort_order', 'desc')  # 默认降序
+        
+        # 查询成绩记录
+        records = GradeRecord.objects.filter(course=course)
+        
+        # 应用过滤条件
+        if semester:
+            records = records.filter(semester=semester)
+        
+        # 计算统计数据
+        stats = {
+            "count": records.count(),
+            "avg_class_score": records.aggregate(Avg('class_score'))['class_score__avg'] or 0,
+            "avg_homework_score": records.aggregate(Avg('homework_score'))['homework_score__avg'] or 0,
+            "avg_exam_score": records.aggregate(Avg('exam_score'))['exam_score__avg'] or 0,
+            "max_total_score": 0,
+            "min_total_score": 0
+        }
+        
+        # 处理排序
+        records_list = list(records)
+        
+        # 按总分计算最高分和最低分
+        if records_list:
+            total_scores = [record.total_score for record in records_list]
+            stats["max_total_score"] = max(total_scores)
+            stats["min_total_score"] = min(total_scores)
+            
+            # 按照字段排序
+            if sort_by in ['class_score', 'homework_score', 'exam_score']:
+                records_list.sort(
+                    key=lambda x: getattr(x, sort_by) or 0,
+                    reverse=(sort_order.lower() == 'desc')
+                )
+            elif sort_by == 'total_score':
+                records_list.sort(
+                    key=lambda x: x.total_score,
+                    reverse=(sort_order.lower() == 'desc')
+                )
+            elif sort_by == 'student_id':
+                records_list.sort(
+                    key=lambda x: x.student.user.staff_id,
+                    reverse=(sort_order.lower() == 'desc')
+                )
+            elif sort_by == 'student_name':
+                records_list.sort(
+                    key=lambda x: x.student.user.username,
+                    reverse=(sort_order.lower() == 'desc')
+                )
+        
+        # 分页
+        paginator = self.pagination_class()
+        page = int(request.query_params.get('page', 1))
+        size = int(request.query_params.get('size', paginator.page_size))
+        
+        start = (page - 1) * size
+        end = start + size
+        
+        serializer = GradeRecordSerializer(records_list[start:end], many=True)
+        
+        return api_response(
+            code=200,
+            message="获取成功",
+            data={
+                "total": len(records_list),
+                "items": serializer.data,
+                "stats": stats
+            }
+        )
+    
+    def post(self, request, course_id):
+        """批量添加或更新成绩记录"""
+        # 检查课程是否存在
+        course = get_object_or_404(Course, course_id=course_id)
+        
+        # 检查是否为教师
+        user = request.user
+        if user.role != 'teacher':
+            return api_response(
+                code=403,
+                message="只有教师可以修改成绩",
+                data=None
+            )
+        
+        # 检查教师是否是该课程的教师
+        try:
+            teacher = user.teacher_profile
+            if course.teacher != teacher:
+                return api_response(
+                    code=403,
+                    message="您不是此课程的教师",
+                    data=None
+                )
+        except:
+            return api_response(
+                code=403,
+                message="教师信息不存在",
+                data=None
+            )
+        
+        # 获取提交的数据
+        records_data = request.data.get('records', [])
+        semester = request.data.get('semester')
+        
+        if not semester:
+            return api_response(
+                code=400,
+                message="学期信息不能为空",
+                data=None
+            )
+        
+        updated_records = []
+        
+        with transaction.atomic():
+            for record_data in records_data:
+                student_id = record_data.get('student_id')
+                
+                try:
+                    student = Student.objects.get(user__staff_id=student_id)
+                except Student.DoesNotExist:
+                    continue
+                
+                # 尝试找到现有记录
+                try:
+                    record = GradeRecord.objects.get(
+                        student=student,
+                        course=course,
+                        semester=semester
+                    )
+                except GradeRecord.DoesNotExist:
+                    record = GradeRecord(
+                        student=student,
+                        course=course,
+                        semester=semester
+                    )
+                
+                # 更新成绩
+                if 'class_score' in record_data:
+                    record.class_score = record_data['class_score']
+                if 'homework_score' in record_data:
+                    record.homework_score = record_data['homework_score']
+                if 'exam_score' in record_data:
+                    record.exam_score = record_data['exam_score']
+                
+                record.save()
+                updated_records.append(record)
+        
+        serializer = GradeRecordSerializer(updated_records, many=True)
+        
+        return api_response(
+            code=200,
+            message="成绩保存成功",
+            data=serializer.data
         ) 

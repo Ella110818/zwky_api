@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CourseAnnouncement, Assignment, AssignmentSubmission, CourseGroup
+from .models import CourseAnnouncement, Assignment, AssignmentSubmission, GradeRecord,CourseGroup
 
 @admin.register(CourseAnnouncement)
 class CourseAnnouncementAdmin(admin.ModelAdmin):
@@ -32,3 +32,10 @@ class CourseGroupAdmin(admin.ModelAdmin):
     def student_count(self, obj):
         return obj.students.count()
     student_count.short_description = '学生数量' 
+
+@admin.register(GradeRecord)
+class GradeRecordAdmin(admin.ModelAdmin):
+    list_display = ('student', 'course', 'semester', 'class_score', 'homework_score', 'exam_score', 'total_score')
+    list_filter = ('course', 'semester')
+    search_fields = ('student__user__username', 'course__title', 'semester')
+    date_hierarchy = 'created_at'

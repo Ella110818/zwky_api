@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from user_management.models import Student
 from user_management.serializers import UserInfoSerializer
-from .models import CourseAnnouncement, Assignment, AssignmentSubmission, CourseGroup
+from .models import CourseAnnouncement, Assignment, AssignmentSubmission, CourseGroup, GradeRecord
 
 class CourseAnnouncementSerializer(serializers.ModelSerializer):
     """课程公告序列化器"""
@@ -70,4 +70,22 @@ class CourseGroupSerializer(serializers.ModelSerializer):
             'id': ret['id'],
             'name': ret['name'],
             'students': ret['students']
-        } 
+        }
+
+class GradeRecordSerializer(serializers.ModelSerializer):
+    """成绩记录序列化器"""
+    student_name = serializers.CharField(source='student.user.username', read_only=True)
+    student_id = serializers.CharField(source='student.user.staff_id', read_only=True)
+    course_title = serializers.CharField(source='course.title', read_only=True)
+    course_code = serializers.CharField(source='course.course_id', read_only=True)
+    semester_display = serializers.CharField(source='get_semester_display', read_only=True)
+    total_score = serializers.DecimalField(max_digits=5, decimal_places=2, read_only=True)
+    
+    class Meta:
+        model = GradeRecord
+        fields = ['id', 'student', 'student_name', 'student_id', 'course', 'course_title', 
+                 'course_code', 'class_score', 'homework_score', 'exam_score', 
+                 'semester', 'semester_display', 'total_score', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'student_name', 'student_id', 'course_title', 
+                           'course_code', 'semester_display', 'total_score', 
+                           'created_at', 'updated_at'] 

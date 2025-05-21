@@ -7237,4 +7237,51 @@ Traceback (most recent call last):
   File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\http\request.py", line 338, in body
     raise RequestDataTooBig(
 django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
-。
+。ERROR 2025-05-15 23:56:37,624 middleware 38364 39340 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-05-15 23:56:49,300 middleware 38364 39340 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-05-15 23:57:04,813 middleware 38364 39340 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-05-20 10:46:11,457 middleware 34528 37820 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-05-20 10:46:11,609 middleware 34528 37820 请求异常 - 路径: /favicon.ico, 异常类型: Http404, 异常信息: ”F:\AAB\git\zwky_api\favicon.ico"不存在
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 51, in serve
+    raise Http404(_("“%(path)s” does not exist") % {"path": fullpath})
+django.http.response.Http404: ”F:\AAB\git\zwky_api\favicon.ico"不存在
+ERROR 2025-05-21 20:44:50,614 middleware 43880 46388 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
