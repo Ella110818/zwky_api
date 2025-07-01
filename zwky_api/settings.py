@@ -51,8 +51,8 @@ INSTALLED_APPS = [
     'class_management',
     'status_management',
     'face_recognition',
-    'advanced_features.apps.AdvancedFeaturesConfig',  # 添加高级功能应用
-    'ai_assistant.apps.AiAssistantConfig',
+    'advanced_features',  # 修改为简单应用名称
+    'ai_assistant',  # 修改为简单应用名称
 ]
 
 # 上传文件大小限制设置

@@ -7285,3 +7285,11 @@ Traceback (most recent call last):
   File "F:\AAB\AAAzwky\venv\Lib\site-packages\django\views\static.py", line 49, in serve
     raise Http404(_("Directory indexes are not allowed here."))
 django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-07-01 14:15:40,865 middleware 2896 34928 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 40, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引

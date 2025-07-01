@@ -1,9 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Django
 *.log
-*.cache
-*.pid
-*.sock
-*.lock
-*.tmp
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media and Static files
+media/
+staticfiles/
+
+# IDE
+.idea/
+.vscode/
 *.swp
+*.swo
+
+# Environment variables
+.env
+
+# Temporary files
+*.bak
 *.tmp
-*.tmp
+*~
+
+# System files
+.DS_Store
+Thumbs.db
