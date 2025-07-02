@@ -7293,3 +7293,907 @@ Traceback (most recent call last):
   File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 40, in serve
     raise Http404(_("Directory indexes are not allowed here."))
 django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-07-01 14:15:41,623 middleware 2896 34928 请求异常 - 路径: /favicon.ico, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\favicon.ico"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\favicon.ico"不存在
+ERROR 2025-07-01 15:27:52,922 middleware 53232 40864 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 40, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-07-01 16:28:59,034 middleware 53232 29952 请求异常 - 路径: /favicon.ico, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\favicon.ico"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\favicon.ico"不存在
+ERROR 2025-07-01 21:19:43,922 middleware 53232 56364 请求异常 - 路径: /favicon.ico, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\favicon.ico"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\favicon.ico"不存在
+ERROR 2025-07-01 21:21:32,797 middleware 53232 22304 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 40, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-07-01 21:32:51,307 middleware 53232 55384 请求异常 - 路径: /admin, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\admin"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\admin"不存在
+ERROR 2025-07-01 21:32:59,300 middleware 53232 55384 请求异常 - 路径: /admin, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\admin"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\admin"不存在
+ERROR 2025-07-01 21:37:20,085 middleware 51520 23652 请求异常 - 路径: /admin, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\admin"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\admin"不存在
+ERROR 2025-07-01 21:37:32,556 middleware 51520 23652 请求异常 - 路径: /admin, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\admin"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\admin"不存在
+ERROR 2025-07-01 21:41:16,151 middleware 51520 23652 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 40, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-07-01 21:41:23,714 middleware 51520 23652 请求异常 - 路径: /, 异常类型: Http404, 异常信息: 这里不允许目录索引
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 40, in serve
+    raise Http404(_("Directory indexes are not allowed here."))
+django.http.response.Http404: 这里不允许目录索引
+ERROR 2025-07-02 11:31:33,670 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:31:40,553 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:31:54,126 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:31:55,410 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:31:55,908 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:31:59,746 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:32:11,243 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:33:50,910 middleware 13140 53780 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:40:07,643 middleware 13140 37436 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:43:43,002 middleware 13140 37436 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:43:43,015 middleware 13140 37436 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:43:43,067 middleware 13140 37436 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:43:43,079 middleware 13140 37436 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:45:34,248 middleware 13140 37436 请求异常 - 路径: /api/api/course/courses/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses"不存在
+ERROR 2025-07-02 11:56:32,664 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:32,699 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:32,732 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:32,760 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,603 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,625 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,651 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,684 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,722 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,745 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,766 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:56:55,820 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:09,636 middleware 13140 53244 请求异常 - 路径: /api/api/course/courses/5/students/info/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses\5\students\info"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses\5\students\info"不存在
+ERROR 2025-07-02 11:57:22,188 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:22,216 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:22,246 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:22,277 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:22,322 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:22,351 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:22,383 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:22,422 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:30,346 middleware 13140 53244 请求异常 - 路径: /api/api/course/courses/10/resources/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses\10\resources"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses\10\resources"不存在
+ERROR 2025-07-02 11:57:30,348 middleware 13140 58264 请求异常 - 路径: /api/api/advanced/courses/10/announcements/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\advanced\courses\10\announcements"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\advanced\courses\10\announcements"不存在
+ERROR 2025-07-02 11:57:48,567 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:48,608 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:48,639 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:48,663 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:48,698 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:48,718 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:48,751 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:57:48,781 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:39,864 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:39,881 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:39,898 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:39,911 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:39,976 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:39,985 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:39,994 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 11:59:40,004 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,290 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,298 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,304 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,312 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,401 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,411 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,420 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:19,428 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:01:23,312 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,342 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,373 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,406 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,441 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,481 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,509 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,538 middleware 13140 53244 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:21,566 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:26,699 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:02:40,032 middleware 13140 58264 请求异常 - 路径: /api/api/course/courses/5/course-times/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\course\courses\5\course-times"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\course\courses\5\course-times"不存在
+ERROR 2025-07-02 12:07:38,204 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:38,211 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:38,218 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:38,224 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:38,239 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:38,246 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:38,252 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:38,258 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:39,968 middleware 13140 58264 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:07:43,853 middleware 13140 52872 请求异常 - 路径: /api/api/advanced/courses/5/announcements/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+ERROR 2025-07-02 12:20:25,521 middleware 13140 62328 请求异常 - 路径: /api/api/advanced/courses/5/announcements/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+ERROR 2025-07-02 12:24:03,451 middleware 13140 67336 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:03,461 middleware 13140 62328 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:03,469 middleware 13140 67336 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:03,478 middleware 13140 62328 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:03,500 middleware 13140 62328 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:03,509 middleware 13140 67336 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:03,516 middleware 13140 62328 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:03,526 middleware 13140 67336 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:24:06,122 middleware 13140 67336 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:31:05,804 middleware 13140 53120 请求异常 - 路径: /api/api/advanced/courses/5/announcements/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+ERROR 2025-07-02 12:31:33,373 middleware 13140 53120 请求异常 - 路径: /api/api/advanced/courses/5/announcements/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\advanced\courses\5\announcements"不存在
+ERROR 2025-07-02 12:32:37,123 middleware 13140 53120 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:32:37,157 middleware 13140 55676 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:32:37,192 middleware 13140 53120 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:32:37,232 middleware 13140 55676 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:32:37,282 middleware 13140 55676 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:32:37,299 middleware 13140 53120 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:32:37,327 middleware 13140 55676 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+ERROR 2025-07-02 12:32:37,357 middleware 13140 53120 请求异常 - 路径: /api/api/user/user/messages/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\api\api\user\user\messages"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\api\api\user\user\messages"不存在

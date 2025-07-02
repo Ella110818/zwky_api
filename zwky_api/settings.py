@@ -140,6 +140,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -190,13 +194,20 @@ FACE_RECOGNITION = {
     'DET_SIZE': (640, 640),
 }
 
-# CORS设置
-CORS_ALLOW_ALL_ORIGINS = True  # 开发环境下允许所有来源
-CORS_ALLOW_CREDENTIALS = True  # 允许跨域请求携带凭证
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:8080",
-#     "http://127.0.0.1:8080",
-# ]
+# CORS 配置
+CORS_ALLOW_ALL_ORIGINS = True  # 开发环境下允许所有域名访问
+
+# 或者指定允许的域名
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React 默认端口
+    "http://localhost:8080",  # Vue 默认端口
+    "http://localhost:3006",  # 你的Vue项目端口
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:8080",
+    "http://127.0.0.1:3006"  # 你的Vue项目端口
+]
+
+# 允许的请求方法
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
@@ -205,6 +216,8 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
+
+# 允许的请求头
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',
@@ -217,13 +230,22 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
 ]
 
+# 允许携带认证信息
+CORS_ALLOW_CREDENTIALS = True
+
 # CSRF设置
 CSRF_COOKIE_HTTPONLY = False  # 允许JavaScript访问CSRF令牌
 CSRF_USE_SESSIONS = False
-# CSRF_COOKIE_SAMESITE = 'None'  # 修改为'None'以允许跨站请求
 CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SECURE = DEBUG is False  # 在生产环境中使用安全cookie
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8080', 'http://127.0.0.1:8080', 'http://localhost:3000', 'http://127.0.0.1:3000']
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8080', 
+    'http://127.0.0.1:8080', 
+    'http://localhost:3000', 
+    'http://127.0.0.1:3000',
+    'http://localhost:3006',  # 添加你的Vue项目端口
+    'http://127.0.0.1:3006'  # 添加你的Vue项目端口
+]
 # 添加用于API的特定设置
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
 CSRF_COOKIE_NAME = 'csrftoken'
