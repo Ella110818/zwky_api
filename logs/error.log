@@ -30933,3 +30933,11 @@ Traceback (most recent call last):
   File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
     raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
 django.http.response.Http404: ”D:\demo\zwky_api\ws\chat\5"不存在
+ERROR 2025-07-02 20:37:55,241 middleware 59880 18144 请求异常 - 路径: /ws/chat/5/, 异常类型: Http404, 异常信息: ”D:\demo\zwky_api\ws\chat\5"不存在
+Traceback (most recent call last):
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\demo\zwky_api\venv\Lib\site-packages\django\views\static.py", line 42, in serve
+    raise Http404(_('“%(path)s” does not exist') % {'path': fullpath})
+django.http.response.Http404: ”D:\demo\zwky_api\ws\chat\5"不存在
