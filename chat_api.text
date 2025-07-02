@@ -1,0 +1,168 @@
+# Chat 模块 API 文档
+
+## REST API 接口
+基础URL: `/api/chat/`
+
+### 获取消息列表
+```
+GET /api/chat/messages/?course_id={course_id}
+```
+
+- 功能：获取指定课程的聊天消息列表
+- 参数：
+  - course_id: 课程ID（必填，查询参数）
+- 需要认证：是
+- 返回示例：
+```json
+[
+    {
+        "id": 1,
+        "sender_name": "username",
+        "text": "消息内容",
+        "timestamp": "2025-07-02 14:50:41",
+        "course": 1
+    }
+]
+```
+
+### 创建消息
+```
+POST /api/chat/messages/
+```
+- 功能：创建新的聊天消息
+- 请求体：
+```json
+{
+    "text": "消息内容",
+    "course": 1  // 课程ID
+}
+```
+- 需要认证：是
+- 返回示例：
+```json
+{
+    "id": 1,
+    "sender_name": "username",
+    "text": "消息内容",
+    "timestamp": "2025-07-02 14:50:41",
+    "course": 1
+}
+```
+
+## WebSocket 接口
+
+### 实时聊天连接
+```
+ws://localhost:8000/ws/chat/{course_id}/
+```
+- 功能：建立实时聊天连接
+- 参数：
+  - course_id: 课程ID（必填，URL参数）
+- 需要认证：是
+- 注意：
+  1. Django 后端运行在 8000 端口
+  2. 前端应用运行在 3006 端口
+  3. 如果使用HTTPS，需要使用 wss:// 替代 ws://
+  4. 生产环境需要替换为实际域名
+
+### WebSocket 消息格式
+
+1. 发送消息格式：
+```json
+{
+    "message": "消息内容"
+}
+```
+
+2. 接收消息格式：
+```json
+{
+    "message": "消息内容",
+    "sender": "发送者用户名",
+    "timestamp": "2025-07-02 14:50:41"
+}
+```
+
+## 前端实现示例
+
+### WebSocket 连接
+```javascript
+// 开发环境配置
+const WEBSOCKET_URL = 'ws://localhost:8000';  // Django 后端地址
+const FRONTEND_PORT = 3006;  // 前端运行端口
+
+// WebSocket 连接
+const ws = new WebSocket(`${WEBSOCKET_URL}/ws/chat/${courseId}/`);
+
+// 添加认证信息（如果需要）
+ws.onopen = () => {
+    console.log('WebSocket 连接已建立');
+};
+
+ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    console.log('收到消息:', data);
+};
+
+ws.onclose = () => {
+    console.log('WebSocket 连接已关闭');
+    // 可以在这里实现重连逻辑
+};
+
+ws.onerror = (error) => {
+    console.error('WebSocket 错误:', error);
+};
+
+// 重连函数示例
+function reconnect() {
+    setTimeout(() => {
+        console.log('尝试重新连接...');
+        const newWs = new WebSocket(`${WEBSOCKET_URL}/ws/chat/${courseId}/`);
+        // ... 重新绑定事件处理器
+    }, 3000);  // 3秒后重试
+}
+```
+
+### 发送消息
+```javascript
+// 通过 WebSocket 发送消息
+ws.send(JSON.stringify({
+    message: "Hello, World!"
+}));
+
+// 或通过 REST API 发送消息
+fetch('http://localhost:8000/api/chat/messages/', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer your-token-here' // 如果使用JWT
+    },
+    body: JSON.stringify({
+        text: "Hello, World!",
+        course: courseId
+    })
+});
+```
+
+### 获取历史消息
+```javascript
+fetch(`http://localhost:8000/api/chat/messages/?course_id=${courseId}`, {
+    headers: {
+        'Authorization': 'Bearer your-token-here' // 如果使用JWT
+    }
+})
+.then(response => response.json())
+.then(messages => {
+    console.log('历史消息:', messages);
+});
+```
+
+## 注意事项
+1. 本地开发时使用 localhost:8000
+2. 确保在请求时包含正确的认证信息（token 或 cookie）
+3. WebSocket 连接断开时建议实现重连机制
+4. 建议实现消息发送状态和加载状态的处理
+5. 可以添加消息发送失败重试机制
+6. 考虑实现消息分页加载功能
+7. 如果遇到跨域问题，需要在Django后端配置CORS
+8. 生产环境部署时记得更换为实际的域名和HTTPS

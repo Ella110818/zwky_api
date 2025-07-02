@@ -8,6 +8,8 @@ from rest_framework.permissions import AllowAny
 from openai import OpenAI
 import httpx
 import inspect
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
 # 获取logger
 logger = logging.getLogger('zwky_api')
@@ -59,6 +61,32 @@ class ChatWithAIView(APIView):
             logger.error(f"OpenAI客户端初始化失败: {str(e)}", exc_info=True)
             raise
 
+    @swagger_auto_schema(
+        operation_description="与 AI 助手进行对话",
+        request_body=openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            required=['message'],
+            properties={
+                'message': openapi.Schema(type=openapi.TYPE_STRING, description='用户发送的消息'),
+                'deep_thinking': openapi.Schema(type=openapi.TYPE_BOOLEAN, description='是否启用深度思考模式', default=False),
+            }
+        ),
+        responses={
+            200: openapi.Response(
+                description="成功响应",
+                schema=openapi.Schema(
+                    type=openapi.TYPE_OBJECT,
+                    properties={
+                        'content': openapi.Schema(type=openapi.TYPE_STRING, description='AI 助手的回复内容'),
+                        'reasoning': openapi.Schema(type=openapi.TYPE_STRING, description='推理过程（如果有）'),
+                        'has_reasoning': openapi.Schema(type=openapi.TYPE_BOOLEAN, description='是否包含推理过程'),
+                    }
+                )
+            ),
+            400: 'Bad Request - 消息不能为空',
+            500: 'Internal Server Error - 处理请求时出错'
+        }
+    )
     def post(self, request):
         try:
             user_message = request.data.get('message')

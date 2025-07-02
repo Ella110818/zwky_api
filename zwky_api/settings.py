@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'drf_yasg',  # 添加 Swagger 文档生成器
+    'channels',
     
     # 自定义应用
     'user_management',
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'face_recognition',
     'advanced_features',  # 修改为简单应用名称
     'ai_assistant',  # 修改为简单应用名称
+    'chat',
 ]
 
 # 上传文件大小限制设置
@@ -199,12 +201,16 @@ CORS_ALLOW_ALL_ORIGINS = True  # 开发环境下允许所有域名访问
 
 # 或者指定允许的域名
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",  # Swagger UI 端口
+    "http://127.0.0.1:8000",  # Swagger UI 端口
     "http://localhost:3000",  # React 默认端口
     "http://localhost:8080",  # Vue 默认端口
+    "http://localhost:3003",  # 你的前端项目端口
     "http://localhost:3006",  # 你的Vue项目端口
     "http://127.0.0.1:3000",
     "http://127.0.0.1:8080",
-    "http://127.0.0.1:3006"  # 你的Vue项目端口
+    "http://127.0.0.1:3003",
+    "http://127.0.0.1:3006"
 ]
 
 # 允许的请求方法
@@ -239,12 +245,16 @@ CSRF_USE_SESSIONS = False
 CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SECURE = DEBUG is False  # 在生产环境中使用安全cookie
 CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',  # Swagger UI 端口
+    'http://127.0.0.1:8000',  # Swagger UI 端口
     'http://localhost:8080', 
     'http://127.0.0.1:8080', 
     'http://localhost:3000', 
     'http://127.0.0.1:3000',
-    'http://localhost:3006',  # 添加你的Vue项目端口
-    'http://127.0.0.1:3006'  # 添加你的Vue项目端口
+    'http://localhost:3003',
+    'http://127.0.0.1:3003',
+    'http://localhost:3006',
+    'http://127.0.0.1:3006'
 ]
 # 添加用于API的特定设置
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
@@ -300,4 +310,12 @@ LOGGING = {
             'propagate': True,
         },
     },
+}
+
+ASGI_APPLICATION = 'zwky_api.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
 }

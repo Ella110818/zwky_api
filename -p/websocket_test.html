@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebSocket Test</title>
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        #messages {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .input-group {
+            margin: 10px 0;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 5px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .status {
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+
+        .connected {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+
+        .disconnected {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+
+        .message {
+            margin: 5px 0;
+        }
+
+        .message.received {
+            color: blue;
+        }
+
+        .message.sent {
+            color: green;
+        }
+
+        .message.error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>WebSocket Test</h2>
+
+    <div class="input-group">
+        <label>Course ID:</label>
+        <input type="number" id="courseId" value="1">
+    </div>
+
+    <div class="input-group">
+        <button onclick="connect()">Connect</button>
+        <button onclick="disconnect()">Disconnect</button>
+    </div>
+
+    <div id="status" class="status disconnected">
+        Disconnected
+    </div>
+
+    <div id="messages"></div>
+
+    <div class="input-group">
+        <input type="text" id="messageInput" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        let ws = null;
+        const messagesDiv = document.getElementById('messages');
+        const statusDiv = document.getElementById('status');
+        const messageInput = document.getElementById('messageInput');
+
+        function connect() {
+            const courseId = document.getElementById('courseId').value;
+            const wsUrl = `ws://localhost:8000/ws/chat/${courseId}/`;
+
+            try {
+                ws = new WebSocket(wsUrl);
+
+                ws.onopen = () => {
+                    statusDiv.textContent = 'Connected';
+                    statusDiv.className = 'status connected';
+                    addMessage('System', 'Connected to WebSocket server');
+                };
+
+                ws.onmessage = (event) => {
+                    const data = JSON.parse(event.data);
+                    addMessage('Received', JSON.stringify(data, null, 2));
+                };
+
+                ws.onclose = () => {
+                    statusDiv.textContent = 'Disconnected';
+                    statusDiv.className = 'status disconnected';
+                    addMessage('System', 'Disconnected from WebSocket server');
+                    ws = null;
+                };
+
+                ws.onerror = (error) => {
+                    addMessage('Error', 'WebSocket error occurred');
+                    console.error('WebSocket error:', error);
+                };
+
+            } catch (error) {
+                addMessage('Error', `Failed to connect: ${error.message}`);
+            }
+        }
+
+        function disconnect() {
+            if (ws) {
+                ws.close();
+            }
+        }
+
+        function sendMessage() {
+            if (!ws) {
+                addMessage('Error', 'Not connected to WebSocket server');
+                return;
+            }
+
+            const message = messageInput.value;
+            if (!message) return;
+
+            try {
+                ws.send(JSON.stringify({ message }));
+                addMessage('Sent', message);
+                messageInput.value = '';
+            } catch (error) {
+                addMessage('Error', `Failed to send message: ${error.message}`);
+            }
+        }
+
+        function addMessage(type, content) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type.toLowerCase()}`;
+            messageDiv.textContent = `[${type}] ${content}`;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        // 支持按Enter键发送消息
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+
+</html>

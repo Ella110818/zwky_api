@@ -52,6 +52,7 @@ urlpatterns = [
         path('status/', include('status_management.urls')),
         path('advanced/', include('advanced_features.urls')),  # 添加高级功能URLs
         path('ai/', include('ai_assistant.urls')),
+        path('chat/', include('chat.urls')),
     ])),
     # 添加人脸识别应用的URL
     path('face_recognition/', include('face_recognition.urls')),
