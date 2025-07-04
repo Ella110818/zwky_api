@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',  # 必须在最前面
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,17 +45,16 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'drf_yasg',  # 添加 Swagger 文档生成器
-    'channels',
     
     # 自定义应用
-    'user_management',
+    'chat',
     'course_management',
     'class_management',
+    'user_management',
     'status_management',
+    'advanced_features',
+    'ai_assistant',
     'face_recognition',
-    'advanced_features',  # 修改为简单应用名称
-    'ai_assistant',  # 修改为简单应用名称
-    'chat',
 ]
 
 # 上传文件大小限制设置
@@ -198,19 +198,27 @@ FACE_RECOGNITION = {
 
 # CORS 配置
 CORS_ALLOW_ALL_ORIGINS = True  # 开发环境下允许所有域名访问
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True  # 允许所有来源
 
-# 或者指定允许的域名
+# 允许所有主机
+ALLOWED_HOSTS = ['*']
+
+# WebSocket specific CORS settings
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8080',
+    'http://127.0.0.1:8080',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'http://localhost:3010',  # 添加3010端口
+    'http://127.0.0.1:3010',  # 添加3010端口
+]
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",  # Swagger UI 端口
-    "http://127.0.0.1:8000",  # Swagger UI 端口
-    "http://localhost:3000",  # React 默认端口
-    "http://localhost:8080",  # Vue 默认端口
-    "http://localhost:3003",  # 你的前端项目端口
-    "http://localhost:3006",  # 你的Vue项目端口
-    "http://127.0.0.1:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://localhost:8080",
     "http://127.0.0.1:8080",
-    "http://127.0.0.1:3003",
-    "http://127.0.0.1:3006"
 ]
 
 # 允许的请求方法
@@ -236,9 +244,6 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
 ]
 
-# 允许携带认证信息
-CORS_ALLOW_CREDENTIALS = True
-
 # CSRF设置
 CSRF_COOKIE_HTTPONLY = False  # 允许JavaScript访问CSRF令牌
 CSRF_USE_SESSIONS = False
@@ -248,13 +253,6 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',  # Swagger UI 端口
     'http://127.0.0.1:8000',  # Swagger UI 端口
     'http://localhost:8080', 
-    'http://127.0.0.1:8080', 
-    'http://localhost:3000', 
-    'http://127.0.0.1:3000',
-    'http://localhost:3003',
-    'http://127.0.0.1:3003',
-    'http://localhost:3006',
-    'http://127.0.0.1:3006'
 ]
 # 添加用于API的特定设置
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
@@ -268,54 +266,32 @@ if not os.path.exists(LOGS_DIR):
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
-        },
-        'simple': {
-            'format': '{levelname} {asctime} {message}',
-            'style': '{',
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
         },
     },
-    'handlers': {
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(LOGS_DIR, 'zwky_api.log'),
-            'maxBytes': 1024 * 1024 * 5,  # 5 MB
-            'backupCount': 5,
-            'formatter': 'verbose',
-            'encoding': 'utf-8',  # 添加UTF-8编码设置
-        },
-        'error_file': {
-            'level': 'ERROR',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(LOGS_DIR, 'error.log'),
-            'maxBytes': 1024 * 1024 * 5,  # 5 MB
-            'backupCount': 5,
-            'formatter': 'verbose',
-            'encoding': 'utf-8',  # 添加UTF-8编码设置
-        },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
     },
     'loggers': {
         'django': {
-            'handlers': ['file', 'error_file'],
+            'handlers': ['console'],
             'level': 'INFO',
-            'propagate': True,
+            'propagate': False,
         },
-        'zwky_api': {
-            'handlers': ['file', 'error_file'],
+        'chat': {
+            'handlers': ['console'],
             'level': 'INFO',
-            'propagate': True,
+            'propagate': False,
         },
     },
 }
 
+# Channels configuration
 ASGI_APPLICATION = 'zwky_api.asgi.application'
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer'
-    }
-}
+# WebSocket specific settings
+WEBSOCKET_ACCEPT_ALL = True  # 允许所有WebSocket连接
+WEBSOCKET_URL = '/ws/'  # WebSocket URL前缀

@@ -2,174 +2,308 @@
 <html>
 
 <head>
-    <title>WebSocket Test</title>
+    <title>WebSocket Chat Test</title>
     <style>
         body {
-            margin: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
             font-family: Arial, sans-serif;
         }
 
         #messages {
+            width: 100%;
             height: 300px;
             overflow-y: auto;
             border: 1px solid #ccc;
-            margin: 10px 0;
+            margin-bottom: 10px;
             padding: 10px;
+            background: #fff;
         }
 
-        .input-group {
-            margin: 10px 0;
+        .input-container {
+            margin-bottom: 10px;
         }
 
-        input[type="text"],
-        input[type="number"] {
+        #messageInput {
+            width: calc(100% - 10px);
             padding: 5px;
-            margin-right: 10px;
-            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .button-group {
+            margin-bottom: 10px;
         }
 
         button {
-            padding: 5px 10px;
+            padding: 5px 15px;
+            margin-right: 10px;
             cursor: pointer;
-        }
-
-        .status {
-            padding: 5px;
-            margin: 5px 0;
-            border-radius: 3px;
-        }
-
-        .connected {
-            background-color: #dff0d8;
-            color: #3c763d;
-        }
-
-        .disconnected {
-            background-color: #f2dede;
-            color: #a94442;
         }
 
         .message {
             margin: 5px 0;
+            padding: 5px;
+            border-radius: 5px;
         }
 
-        .message.received {
-            color: blue;
+        .sent {
+            background-color: #e3f2fd;
+            margin-left: 20%;
+            margin-right: 0;
         }
 
-        .message.sent {
-            color: green;
+        .received {
+            background-color: #f5f5f5;
+            margin-right: 20%;
+            margin-left: 0;
         }
 
-        .message.error {
-            color: red;
+        .system {
+            background-color: #fff3e0;
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .error {
+            background-color: #ffebee;
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .status {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .connected {
+            background-color: #c8e6c9;
+        }
+
+        .disconnected {
+            background-color: #ffcdd2;
+        }
+
+        .connecting {
+            background-color: #fff3e0;
+        }
+
+        #debug {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
         }
     </style>
 </head>
 
 <body>
-    <h2>WebSocket Test</h2>
-
-    <div class="input-group">
-        <label>Course ID:</label>
-        <input type="number" id="courseId" value="1">
-    </div>
-
-    <div class="input-group">
+    <h2>WebSocket Chat Test</h2>
+    <div class="status disconnected" id="status">Disconnected</div>
+    <div class="button-group">
         <button onclick="connect()">Connect</button>
         <button onclick="disconnect()">Disconnect</button>
+        <button onclick="clearMessages()">Clear Messages</button>
     </div>
-
-    <div id="status" class="status disconnected">
-        Disconnected
-    </div>
-
     <div id="messages"></div>
-
-    <div class="input-group">
-        <input type="text" id="messageInput" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
+    <div class="input-container">
+        <input type="text" id="messageInput" placeholder="Type a message and press Enter..." disabled>
+        <button onclick="sendMessage()" id="sendButton" disabled>Send</button>
     </div>
+    <div id="debug"></div>
 
     <script>
         let ws = null;
-        const messagesDiv = document.getElementById('messages');
-        const statusDiv = document.getElementById('status');
-        const messageInput = document.getElementById('messageInput');
+        let reconnectAttempts = 0;
+        let maxReconnectAttempts = 5;
+        let reconnectTimeout = null;
+
+        // 这里直接使用token，不需要用户输入
+        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNTQ3Mjc3LCJpYXQiOjE3NTE0NjA4NzcsImp0aSI6IjE2MGU3YTMzMmU3ZjQ3NDg4MDQzMTIyNjc0MjMzNzZhIiwidXNlcl9pZCI6MjR9.McTgWpIoWYYWBuPthtoDSq72HBSNSfVXQPhd2MKViho';
+
+        function updateDebug(message) {
+            const debug = document.getElementById('debug');
+            const timestamp = new Date().toISOString();
+            debug.textContent += `[${timestamp}] ${message}\n`;
+            debug.scrollTop = debug.scrollHeight;
+        }
+
+        function updateStatus(status, className) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = status;
+            statusDiv.className = `status ${className}`;
+        }
+
+        function enableMessageInput(enabled) {
+            document.getElementById('messageInput').disabled = !enabled;
+            document.getElementById('sendButton').disabled = !enabled;
+        }
 
         function connect() {
-            const courseId = document.getElementById('courseId').value;
-            const wsUrl = `ws://localhost:8000/ws/chat/${courseId}/`;
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                updateDebug('Already connected');
+                return;
+            }
 
             try {
+                updateStatus('Connecting...', 'connecting');
+                updateDebug('Attempting to connect...');
+
+                // 使用固定的课程ID 5
+                const courseId = 5;
+                const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+                const wsHost = window.location.hostname;
+                const wsPort = '8000';  // Django 服务器端口
+                const wsUrl = `${wsProtocol}//${wsHost}:${wsPort}/ws/chat/${courseId}/`;
+
                 ws = new WebSocket(wsUrl);
 
-                ws.onopen = () => {
-                    statusDiv.textContent = 'Connected';
-                    statusDiv.className = 'status connected';
-                    addMessage('System', 'Connected to WebSocket server');
+                ws.onopen = function () {
+                    updateStatus('Connected', 'connected');
+                    updateDebug('WebSocket connection established');
+                    enableMessageInput(true);
+                    reconnectAttempts = 0;
+
+                    // 发送认证消息
+                    const authMessage = {
+                        type: 'authentication',
+                        token: token
+                    };
+                    ws.send(JSON.stringify(authMessage));
+                    updateDebug('Sent authentication message');
                 };
 
-                ws.onmessage = (event) => {
-                    const data = JSON.parse(event.data);
-                    addMessage('Received', JSON.stringify(data, null, 2));
+                ws.onmessage = function (event) {
+                    updateDebug(`Received message: ${event.data}`);
+                    try {
+                        const data = JSON.parse(event.data);
+
+                        switch (data.type) {
+                            case 'authentication_successful':
+                                appendMessage("System", "Authentication successful", "system");
+                                break;
+                            case 'authentication_failed':
+                                appendMessage("System", "Authentication failed", "error");
+                                disconnect();
+                                break;
+                            case 'error':
+                                appendMessage("System", `Error: ${data.message}`, "error");
+                                break;
+                            default:
+                                const sender = data.sender || "Server";
+                                const message = data.message;
+                                const timestamp = data.timestamp ? `[${data.timestamp}] ` : '';
+                                appendMessage(sender, `${timestamp}${message}`, "received");
+                        }
+                    } catch (e) {
+                        updateDebug(`Error parsing message: ${e}`);
+                        appendMessage("System", "Error parsing message", "error");
+                    }
                 };
 
-                ws.onclose = () => {
-                    statusDiv.textContent = 'Disconnected';
-                    statusDiv.className = 'status disconnected';
-                    addMessage('System', 'Disconnected from WebSocket server');
+                ws.onclose = function (event) {
+                    updateStatus('Disconnected', 'disconnected');
+                    updateDebug(`WebSocket connection closed (code: ${event.code})`);
+                    enableMessageInput(false);
                     ws = null;
+
+                    // 尝试重新连接
+                    if (reconnectAttempts < maxReconnectAttempts) {
+                        reconnectAttempts++;
+                        const delay = Math.min(1000 * Math.pow(2, reconnectAttempts - 1), 10000);
+                        updateDebug(`Attempting to reconnect in ${delay / 1000} seconds... (Attempt ${reconnectAttempts}/${maxReconnectAttempts})`);
+
+                        if (reconnectTimeout) {
+                            clearTimeout(reconnectTimeout);
+                        }
+                        reconnectTimeout = setTimeout(connect, delay);
+                    } else {
+                        updateDebug('Max reconnection attempts reached');
+                        appendMessage("System", "Failed to reconnect after multiple attempts", "error");
+                    }
                 };
 
-                ws.onerror = (error) => {
-                    addMessage('Error', 'WebSocket error occurred');
+                ws.onerror = function (error) {
+                    updateDebug('WebSocket error occurred');
                     console.error('WebSocket error:', error);
+                    appendMessage("System", "Connection error occurred", "error");
                 };
 
             } catch (error) {
-                addMessage('Error', `Failed to connect: ${error.message}`);
+                updateDebug(`Error creating WebSocket: ${error}`);
+                updateStatus('Connection Failed', 'disconnected');
+                appendMessage("System", `Connection error: ${error.message}`, "error");
             }
         }
 
         function disconnect() {
-            if (ws) {
-                ws.close();
+            if (reconnectTimeout) {
+                clearTimeout(reconnectTimeout);
+                reconnectTimeout = null;
             }
+
+            if (ws) {
+                updateDebug('Manually disconnecting...');
+                ws.close();
+                ws = null;
+            }
+
+            enableMessageInput(false);
+            updateStatus('Disconnected', 'disconnected');
+            reconnectAttempts = maxReconnectAttempts; // 防止自动重连
         }
 
         function sendMessage() {
-            if (!ws) {
-                addMessage('Error', 'Not connected to WebSocket server');
-                return;
-            }
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
 
-            const message = messageInput.value;
-            if (!message) return;
+            if (message && ws && ws.readyState === WebSocket.OPEN) {
+                try {
+                    const data = {
+                        type: 'chat_message',
+                        message: message
+                    };
 
-            try {
-                ws.send(JSON.stringify({ message }));
-                addMessage('Sent', message);
-                messageInput.value = '';
-            } catch (error) {
-                addMessage('Error', `Failed to send message: ${error.message}`);
+                    ws.send(JSON.stringify(data));
+                    updateDebug(`Sent message: ${message}`);
+                    appendMessage("You", message, "sent");
+                    messageInput.value = '';
+                } catch (error) {
+                    updateDebug(`Error sending message: ${error}`);
+                    appendMessage("System", "Failed to send message", "error");
+                }
             }
         }
 
-        function addMessage(type, content) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${type.toLowerCase()}`;
-            messageDiv.textContent = `[${type}] ${content}`;
-            messagesDiv.appendChild(messageDiv);
+        function appendMessage(sender, message, type) {
+            const messagesDiv = document.getElementById('messages');
+            const messageElement = document.createElement('div');
+            messageElement.className = `message ${type}`;
+            messageElement.textContent = `${sender}: ${message}`;
+            messagesDiv.appendChild(messageElement);
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
 
-        // 支持按Enter键发送消息
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
+        function clearMessages() {
+            document.getElementById('messages').innerHTML = '';
+            document.getElementById('debug').innerHTML = '';
+            updateDebug('Messages cleared');
+        }
+
+        // 添加回车键发送消息的功能
+        document.getElementById('messageInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
                 sendMessage();
             }
         });
+
+        // 页面加载完成后自动连接
+        window.onload = connect;
     </script>
 </body>
 
